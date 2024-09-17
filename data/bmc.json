@@ -4,10 +4,11 @@
         "key_activities": ["Software development", "Content management"],
         "key_resources": ["Music licensing contracts", "Infrastructure"],
         "value_proposition": ["Music streaming"],
-        "customer_relationships": [""],
+        "customer_relationships": ["N/A"],
         "channels": ["Online platform", "Mobile app"],
         "customer_segments": ["Music listeners", "Advertisers"],
-        "revenue_streams": ["Subscriptions", "Advertising"]
+        "revenue_streams": ["Subscriptions", "Advertising"],
+        "cost_structure": ["Music licensing fees", "Server infrastructure", "App development"]
     },
     "Blizzard": {
         "key_partners": ["Data centers", "ISP", "Retail stores"],
@@ -17,7 +18,9 @@
         "customer_relationships": ["battle.net"],
         "channels": ["battle.net", "Retail stores"],
         "customer_segments": ["Gamers"],
-        "revenue_streams": ["Monthly subscriptions", "Game purchase"]
+        "revenue_streams": ["Monthly subscriptions", "Game purchase"],
+        "cost_structure": ["Game development", "Server maintenance"]
+
     },
     "Netflix": {
         "key_partners": ["Content creators", "Studios", "Internet providers"],
@@ -27,7 +30,9 @@
         "customer_relationships": ["Streaming platform"],
         "channels": ["Website", "Mobile app"],
         "customer_segments": ["Consumers", "Households"],
-        "revenue_streams": ["Subscriptions"]
+        "revenue_streams": ["Subscriptions"],
+        "cost_structure": ["Content licensing fees", "Original content production", "Technology infrastructure"]
+
     },
     "Tesla": {
         "key_partners": ["Battery suppliers", "Charging network partners"],
@@ -37,7 +42,9 @@
         "customer_relationships": [""],
         "channels": ["Website", "Physical stores"],
         "customer_segments": ["Environmentally conscious consumers", "Technology enthusiasts"],
-        "revenue_streams": ["Car sales", "Energy products"]
+        "revenue_streams": ["Car sales", "Energy products"],
+        "cost_structure": ["R&D", "Battery production", "Manufacturing facilities", "Sales and marketing"]
+
     },
     "Amazon": {
         "key_partners": ["Sellers", "Logistics partners", "Manufacturers"],
@@ -47,7 +54,9 @@
         "customer_relationships": ["Online platform"],
         "channels": ["Website", "Mobile app"],
         "customer_segments": ["Consumers", "Businesses"],
-        "revenue_streams": ["Product sales", "AWS services"]
+        "revenue_streams": ["Product sales", "AWS services"],
+        "cost_structure": ["Logistics", "Data center operations", "Technology infrastructure"]
+
     },
     "AirBnb": {
         "key_partners": ["Hosts", "Travel service providers"],
@@ -57,7 +66,9 @@
         "customer_relationships": ["Platform interactions"],
         "channels": ["Website", "Mobile app"],
         "customer_segments": ["Travelers", "Hosts"],
-        "revenue_streams": ["Service fees"]
+        "revenue_streams": ["Service fees"],
+        "cost_structure": ["Technology infrastructure", "Customer support"]
+
     },
     "IKEA": {
         "key_partners": ["Suppliers", "Logistics providers"],
@@ -67,7 +78,9 @@
         "customer_relationships": [""],
         "channels": ["Retail stores", "Website"],
         "customer_segments": ["Cost-conscious consumers", "Homeowners"],
-        "revenue_streams": ["Furniture sales"]
+        "revenue_streams": ["Furniture sales"],
+        "cost_structure": ["Manufacturing", "Logistics", "Retail store operations"]
+
     },
     "SpaceX": {
         "key_partners": ["NASA", "Satellite companies", "Government agencies"],
@@ -77,7 +90,9 @@
         "customer_relationships": ["Government contracts", "Commercial partnerships"],
         "channels": ["Direct sales", "Government bidding"],
         "customer_segments": ["Government agencies", "Satellite companies", "Space tourism"],
-        "revenue_streams": ["Launch services", "Satellite deployment fees"]
+        "revenue_streams": ["Launch services", "Satellite deployment fees"],
+        "cost_structure": ["Rocket production", "R&D", "Launch facility operations"]
+
     },
     "Discord": {
         "key_partners": ["Game developers", "Streamers", "Community moderators", "Open source contributors"],
@@ -87,7 +102,9 @@
         "customer_relationships": ["Active community engagement", "User-moderated servers", "Frequent platform updates based on user feedback"],
         "channels": ["Discord app", "Desktop client", "API for integrations"],
         "customer_segments": ["Gamers", "Content creators", "Streamers", "Education communities", "Developers"],
-        "revenue_streams": ["Nitro subscriptions", "Server boosting"]
+        "revenue_streams": ["Nitro subscriptions", "Server boosting"],
+        "cost_structure": ["Server maintenance", "Platform development", "Customer support"]
+
     },
     "WeWork": {
         "key_partners": ["Real estate developers", "Property management companies"],
@@ -97,7 +114,8 @@
         "customer_relationships": ["Community events", "Online platform"],
         "channels": ["Website", "Physical locations"],
         "customer_segments": ["Startups", "Freelancers", "Corporates"],
-        "revenue_streams": ["Membership fees", "Office rentals"]
+        "revenue_streams": ["Membership fees", "Office rentals"],
+        "cost_structure": ["Real estate operations", "Property maintenance", "Technology infrastructure"]
     },
     "Zara": {
         "key_partners": ["Local textile suppliers", "In-house manufacturing units"],
@@ -107,7 +125,8 @@
         "customer_relationships": ["In-store and online personalized recommendations", "Loyalty programs with exclusive offers"],
         "channels": ["Retail stores", "Online store", "Social media for trend discovery"],
         "customer_segments": ["Fashion-forward individuals", "Young adults", "Eco-conscious consumers"],
-        "revenue_streams": ["Clothing sales", "Limited-edition releases", "Sustainable product lines"]
+        "revenue_streams": ["Clothing sales", "Limited-edition releases", "Sustainable product lines"],
+        "cost_structure": ["Design and production", "Logistics", "Retail operations"]
     },
     "Starlink": {
         "key_partners": ["Satellite manufacturers", "Launch service providers", "Ground station partners"],

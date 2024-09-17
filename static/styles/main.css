@@ -1,94 +1,129 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
+body, html {
+    height: 100%; /* Sørger for at body og html tar opp hele høyden av skjermen */
+    margin: 0; /* Fjerner standard margin */
+    justify-content: center; /* Sentrerer horisontalt */
+    align-items: center; /* Sentrerer vertikalt */
+    background-color: #f4f4f4; /* Bakgrunnsfarge for å vise kontrast */
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 36px; /* Økt skriftstørrelse for overskriften */
+    font-weight: bold;
 }
 
+/* Juster grid-container for å redusere høyde */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-    gap: 10px;
-    max-width: 900px;
+    grid-template-columns: repeat(5, 1fr); /* 5 kolonner */
+    grid-template-rows: repeat(3, auto); /* 3 rader */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 15px; /* Redusert padding */
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Reduser padding inni grid-item for å minske høyden */
 .grid-item {
     border: 1px solid #ccc;
-    padding: 15px;
+    padding: 15px; /* Redusert padding inni boksene */
     background-color: #fafafa;
     border-radius: 5px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .grid-item span {
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 10px; /* Øker avstanden mellom overskrift og innhold */
+    text-align: center; /* Justerer teksten i innholdet til venstre */
+    line-height: 1.5; /* Økt linjeavstand for å gi mer plass mellom linjene */
 }
 
+.grid-item div {
+    margin-bottom: 5px; /* Legg til litt margin mellom hver linje */
+}
+
+/* Justering av containerstørrelse */
+.combined-structure {
+    grid-column: 1 / 6; /* 1-6 */
+    grid-row: 3 / 4;    /* Rad 3 */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Key Partners tar to rader */
 .key-partners {
     grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    grid-row: 1 / 3; /* Dekker rad 1 og rad 2 */
 }
 
+/* Key Activities */
 .key-activities {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
+/* Key Resources */
 .key-resources {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
+/* Value Proposition tar to rader */
 .value-proposition {
     grid-column: 3 / 4;
-    grid-row: 1 / 3;
+    grid-row: 1 / 3; /* Dekker rad 1 og rad 2 */
 }
 
+/* Customer Relationships */
 .customer-relationships {
     grid-column: 4 / 5;
     grid-row: 1 / 2;
 }
 
+/* Channels */
 .channels {
     grid-column: 4 / 5;
     grid-row: 2 / 3;
 }
 
+/* Customer Segments tar to rader */
 .customer-segments {
-    grid-column: 4 / 5;
-    grid-row: 3 / 4;
+    grid-column: 5 / 6;
+    grid-row: 1 / 3; /* Dekker rad 1 og rad 2 */
 }
 
-.cost-structure {
-    grid-column: 1 / 3;
-    grid-row: 3 / 4;
-}
-
-.revenue-streams {
-    grid-column: 3 / 5;
-    grid-row: 3 / 4;
-}
-
-#result {
-    margin-top: 20px;
-    font-size: 18px;
+/* Cost Structure og Revenue Streams deler plassen horisontalt */
+.combined-structure .cost-structure,
+.combined-structure .revenue-streams {
+    flex: 1;
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 15px; /* Økt padding for mer plass inni boksene */
+    background-color: #fafafa;
+    border-radius: 5px;
+    text-align: center;
     font-weight: bold;
+    font-size: 16px; /* Økt skriftstørrelse */
+}
+
+.combined-structure .cost-structure span,
+.combined-structure .revenue-streams span {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.5; /* Økt linjeavstand */
+    margin-top: 5px; /* Litt mer avstand mellom overskrift og innhold */
 }
 
 input[type="text"], button {
@@ -110,20 +145,133 @@ button:hover {
     background-color: #218838;
 }
 
+#start-knapp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Tar opp hele bredden av skjermen */
+    height: 40%; /* Tar opp hele høyden av skjermen */
+}
+
 #start-game {
-    display: block;
-    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px; /* Stor skriftstørrelse for overskriften */
+    font-weight: bold;
+    padding: 20px;
+    background-color: #28a745; /* Knappens bakgrunnsfarge */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; /* Gir brukeren en visuell pekepinn om at dette er klikkbart */
+    display: inline-block;
+    transition: transform 0.3s ease; /* Myk overgang ved hover */
+    animation: blink-animation 1.5s infinite; /* Legger til blinkende animasjon */
+}
+#start-game:hover {
+    background-color: #218838; /* Endrer bakgrunnsfarge ved hover */
+    transform: scale(1.05); /* Forstørrer knappen litt ved hover */
+}
+
+/* Blinkende animasjon for å tiltrekke oppmerksomhet */
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+
+
+#main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Tar opp hele bredden av skjermen */
+    height: 45%; /* Tar opp hele høyden av skjermen */
+}
+
+#main-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Sørger for at bildet skalerer riktig */
 }
 
 #bmc-container {
     display: none;
     margin-top: 20px;
+    max-height: 80vh; /* Sørger for at containeren ikke tar mer enn 80% av skjermhøyden */
+    overflow-y: auto; /* Legger til rulling hvis nødvendig */
 }
 
-#guess-container {
+/* #guess-container {
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+#next-round #submit-guess{
+    margin-left: 10px;
+} */
+
+#guess-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto; /* Sentraliser containeren */
+}
+
+#guess-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#guess-container button {
+    padding: 10px 20px;
+    margin: 10px 5px; /* Litt avstand mellom knappene */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#guess-container button:hover {
+    background-color: #218838;
+}
+
+#guess-container #result {
+    font-size: 18px;
+    margin: 10px 0; /* Avstand mellom resultat og inputfeltet */
+    color: #333;
+    text-align: center;
+    min-height: 30px; /* Sørg for at elementet alltid tar opp plass selv når det er tomt */
+    width: 100%;
+}
+
+#next-round {
+    display: none; /* Skjult som standard */
+}
+
 
 #clock {
     font-size: 24px;
@@ -140,7 +288,10 @@ button:hover {
 }
 
 #round-header {
-    font-size: 28px;
-    text-align: center;
-    margin-top: 20px;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 50%; /* Plassér den i midten */
+    transform: translateX(-50%); /* Flytt den tilbake for å sentrere */
+    text-align: center; /* Sentrer teksten */
 }

@@ -30,9 +30,11 @@ def check_answer():
 
 @app.route('/stats', methods=['GET'])
 def show_stats():
-    score = request.args.get('score', 0)
-    total_time = request.args.get('time', '00:00')
-    return render_template('stats.html', score=score, total_time=total_time)
+    score = request.args.get('score')
+    total_time = request.args.get('time')
+    TPBM = request.args.get('TPBM')
+    
+    return render_template('stats.html', score=score, total_time=total_time, TPBM=TPBM)
 
 if __name__ == '__main__':
     app.run(debug=True)

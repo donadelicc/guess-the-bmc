@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">_
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMC Guessing Game</title>
+    <title>Gjett BMC</title>
     <link rel="stylesheet" href="static/styles/main.css">
 
 </head>
 <body>
-    <h1 id="main-title">Guess the Company</h1>
+
+
+    <div id="start-knapp-container">
+        <h1 id="start-game">START SPILLET</h1>   
+    </div>
+
     <div id="round-header" style="display:none;">Runde 1</div>
 
     <!-- Tidtaker og poengsystem -->
-    <div id="clock">Time: 00:00</div>
+    <div id="clock">Tid: 00:00</div>
     <div id="score">Score: 0</div>
     
-    <button id="start-game">Start Game</button>
+    <!-- <button id="start-game">Start</button> GAMMEL KNAPP  --> 
+
+    <div id="main-image">
+        <img src="../static/images/scooby.jpg" alt="scooby" width="300" height="300">
+    </div>
 
     <div id="bmc-container">
         <div class="grid-container">
@@ -26,15 +35,21 @@
             <div class="grid-item customer-relationships">Customer Relationships: <span id="customer_relationships"></span></div>
             <div class="grid-item channels">Channels: <span id="channels"></span></div>
             <div class="grid-item customer-segments">Customer Segments: <span id="customer_segments"></span></div>
-            <div class="grid-item cost-structure">Cost Structure: <span id="cost_structure"></span></div>
-            <div class="grid-item revenue-streams">Revenue Streams: <span id="revenue_streams"></span></div>
+            <div class="grid-item combined-structure">
+                <div class="cost-structure">Cost Structure: <span id="cost_structure"></span></div>
+                <div class="revenue-streams">Revenue Streams: <span id="revenue_streams"></span></div>
+            </div>
         </div>
+        
 
         <div id="guess-container">
+            <p id="result" style="display:none;"></p>
             <input type="text" id="guess" placeholder="Guess the company">
-            <button id="submit-guess">Submit Guess</button>
-            <p id="result"></p>
+            <button id="submit-guess">Send svar</button>
+            <button id="next-round" style="display:none;">Neste</button>
         </div>
+
+
     </div>
 
     <script src="static/scripts/main.js"></script>
