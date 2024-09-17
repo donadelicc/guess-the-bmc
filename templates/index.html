@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">_
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMC Guessing Game</title>
+    <link rel="stylesheet" href="static/styles/main.css">
+
+</head>
+<body>
+    <h1 id="main-title">Guess the Company</h1>
+    <div id="round-header" style="display:none;">Runde 1</div>
+
+    <!-- Tidtaker og poengsystem -->
+    <div id="clock">Time: 00:00</div>
+    <div id="score">Score: 0</div>
+    
+    <button id="start-game">Start Game</button>
+
+    <div id="bmc-container">
+        <div class="grid-container">
+            <div class="grid-item key-partners">Key Partners: <span id="key_partners"></span></div>
+            <div class="grid-item key-activities">Key Activities: <span id="key_activities"></span></div>
+            <div class="grid-item key-resources">Key Resources: <span id="key_resources"></span></div>
+            <div class="grid-item value-proposition">Value Proposition: <span id="value_proposition"></span></div>
+            <div class="grid-item customer-relationships">Customer Relationships: <span id="customer_relationships"></span></div>
+            <div class="grid-item channels">Channels: <span id="channels"></span></div>
+            <div class="grid-item customer-segments">Customer Segments: <span id="customer_segments"></span></div>
+            <div class="grid-item cost-structure">Cost Structure: <span id="cost_structure"></span></div>
+            <div class="grid-item revenue-streams">Revenue Streams: <span id="revenue_streams"></span></div>
+        </div>
+
+        <div id="guess-container">
+            <input type="text" id="guess" placeholder="Guess the company">
+            <button id="submit-guess">Submit Guess</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="static/scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+{
+    "Spotify": {
+        "key_partners": ["Copyright owners"],
+        "key_activities": ["Software development", "Content management"],
+        "key_resources": ["Music licensing contracts", "Infrastructure"],
+        "value_proposition": ["Music streaming"],
+        "customer_relationships": [""],
+        "channels": ["Online platform", "Mobile app"],
+        "customer_segments": ["Music listeners", "Advertisers"],
+        "revenue_streams": ["Subscriptions", "Advertising"]
+    },
+    "Blizzard": {
+        "key_partners": ["Data centers", "ISP", "Retail stores"],
+        "key_activities": ["Content and game development"],
+        "key_resources": ["Game developers", "Game infrastructure"],
+        "value_proposition": ["Online multiplayer game"],
+        "customer_relationships": ["battle.net"],
+        "channels": ["battle.net", "Retail stores"],
+        "customer_segments": ["Gamers"],
+        "revenue_streams": ["Monthly subscriptions", "Game purchase"]
+    },
+    "Netflix": {
+        "key_partners": ["Content creators", "Studios", "Internet providers"],
+        "key_activities": ["Content licensing", "Original content production"],
+        "key_resources": ["Licensing agreements", "Technology infrastructure"],
+        "value_proposition": ["Unlimited streaming of TV shows and movies"],
+        "customer_relationships": ["Streaming platform"],
+        "channels": ["Website", "Mobile app"],
+        "customer_segments": ["Consumers", "Households"],
+        "revenue_streams": ["Subscriptions"]
+    },
+    "Tesla": {
+        "key_partners": ["Battery suppliers", "Charging network partners"],
+        "key_activities": ["Electric vehicle manufacturing", "Autonomous driving R&D"],
+        "key_resources": ["Gigafactories", "Technology patents"],
+        "value_proposition": ["Sustainable transportation", "High-performance electric cars"],
+        "customer_relationships": [""],
+        "channels": ["Website", "Physical stores"],
+        "customer_segments": ["Environmentally conscious consumers", "Technology enthusiasts"],
+        "revenue_streams": ["Car sales", "Energy products"]
+    },
+    "Amazon": {
+        "key_partners": ["Sellers", "Logistics partners", "Manufacturers"],
+        "key_activities": ["E-commerce platform management", "Cloud services"],
+        "key_resources": ["Logistics infrastructure", "Data centers"],
+        "value_proposition": ["Wide selection of products", "Fast delivery"],
+        "customer_relationships": ["Online platform"],
+        "channels": ["Website", "Mobile app"],
+        "customer_segments": ["Consumers", "Businesses"],
+        "revenue_streams": ["Product sales", "AWS services"]
+    },
+    "AirBnb": {
+        "key_partners": ["Hosts", "Travel service providers"],
+        "key_activities": ["Platform management", "Trust and safety"],
+        "key_resources": ["Technology infrastructure", "Brand"],
+        "value_proposition": ["Unique and diverse accommodation options"],
+        "customer_relationships": ["Platform interactions"],
+        "channels": ["Website", "Mobile app"],
+        "customer_segments": ["Travelers", "Hosts"],
+        "revenue_streams": ["Service fees"]
+    },
+    "IKEA": {
+        "key_partners": ["Suppliers", "Logistics providers"],
+        "key_activities": ["Product design", "Retail operations"],
+        "key_resources": ["Distribution centers", "In-house designers"],
+        "value_proposition": ["Affordable, well-designed furniture"],
+        "customer_relationships": [""],
+        "channels": ["Retail stores", "Website"],
+        "customer_segments": ["Cost-conscious consumers", "Homeowners"],
+        "revenue_streams": ["Furniture sales"]
+    },
+    "SpaceX": {
+        "key_partners": ["NASA", "Satellite companies", "Government agencies"],
+        "key_activities": ["Rocket manufacturing", "Satellite deployment"],
+        "key_resources": ["Launch facilities", "Technology patents", "Engineers"],
+        "value_proposition": ["Low-cost space transportation", "Reusable rockets"],
+        "customer_relationships": ["Government contracts", "Commercial partnerships"],
+        "channels": ["Direct sales", "Government bidding"],
+        "customer_segments": ["Government agencies", "Satellite companies", "Space tourism"],
+        "revenue_streams": ["Launch services", "Satellite deployment fees"]
+    },
+    "Discord": {
+        "key_partners": ["Game developers", "Streamers", "Community moderators", "Open source contributors"],
+        "key_activities": ["Platform development", "Server management", "Moderation tools development"],
+        "key_resources": ["Technology infrastructure", "User-generated communities", "Open source contributions"],
+        "value_proposition": ["Free, ad-free communication for gamers and creators", "Customizable servers", "Nitro perks for premium members"],
+        "customer_relationships": ["Active community engagement", "User-moderated servers", "Frequent platform updates based on user feedback"],
+        "channels": ["Discord app", "Desktop client", "API for integrations"],
+        "customer_segments": ["Gamers", "Content creators", "Streamers", "Education communities", "Developers"],
+        "revenue_streams": ["Nitro subscriptions", "Server boosting"]
+    },
+    "WeWork": {
+        "key_partners": ["Real estate developers", "Property management companies"],
+        "key_activities": ["Workspace management", "Community building"],
+        "key_resources": ["Real estate properties", "Technology infrastructure"],
+        "value_proposition": ["Flexible office space and community"],
+        "customer_relationships": ["Community events", "Online platform"],
+        "channels": ["Website", "Physical locations"],
+        "customer_segments": ["Startups", "Freelancers", "Corporates"],
+        "revenue_streams": ["Membership fees", "Office rentals"]
+    },
+    "Zara": {
+        "key_partners": ["Local textile suppliers", "In-house manufacturing units"],
+        "key_activities": ["Fast fashion design and production", "Trend monitoring and quick response", "Retail operations", "Inventory management"],
+        "key_resources": ["In-house design teams", "Integrated supply chain", "Real-time sales data from stores", "Highly efficient logistics network"],
+        "value_proposition": ["Trendy, affordable clothing with new collections updated weekly", "Limited-edition releases to create scarcity and demand"],
+        "customer_relationships": ["In-store and online personalized recommendations", "Loyalty programs with exclusive offers"],
+        "channels": ["Retail stores", "Online store", "Social media for trend discovery"],
+        "customer_segments": ["Fashion-forward individuals", "Young adults", "Eco-conscious consumers"],
+        "revenue_streams": ["Clothing sales", "Limited-edition releases", "Sustainable product lines"]
+    },
+    "Starlink": {
+        "key_partners": ["Satellite manufacturers", "Launch service providers", "Ground station partners"],
+        "key_activities": ["Building and launching satellites", "Developing advanced communication technology"],
+        "key_resources": ["Satellites", "Ground infrastructure"],
+        "value_proposition": ["High-speed satellite internet for underserved areas", "Reliable satellite internet for businesses", "Cost-effective connectivity for governments and public sector"],
+        "customer_relationships": ["Self-service", "Customer support"],
+        "channels": ["Direct sales", "Partnerships"],
+        "customer_segments": ["Consumers in rural and underserved areas", "Businesses and enterprises", "Government and public sector"],
+        "revenue_streams": ["Monthly service subscriptions", "Hardware sales", "Partnerships and commercial services"],
+        "cost_structure": ["Satellite production and deployment costs", "Launch vehicle expenses"]
+    },
+    "Facebook": {
+        "key_partners": ["Content developers", "Advertisers", "Developers"],
+        "key_activities": ["Software development", "Platform management", "Data analysis"],
+        "key_resources": ["Infrastructure and personal user data", "Content and service platform"],
+        "value_proposition": ["Social interaction for users", "Advertising platform for businesses"],
+        "customer_relationships": ["Self-service for users", "Advertising support for businesses"],
+        "channels": ["Website", "Mobile App", "Developer API"],
+        "customer_segments": ["Internet users", "Advertisers", "Developers"],
+        "revenue_streams": ["Advertising fees", "Developer service fees"],
+        "cost_structure": ["Infrastructure costs", "Personnel expenses"]
+    },
+    "Adidas": {
+        "key_partners": ["Suppliers and manufacturers", "Retailers and distributors", "Sports teams, leagues, and athletes"],
+        "key_activities": ["Design and develop athletic products", "Market and brand products"],
+        "key_resources": ["Brand", "Supply chain"],
+        "value_proposition": ["High-quality athletic footwear and apparel for individual consumers", "Performance-driven gear for athletes and sports teams", "Activewear for fitness enthusiasts"],
+        "customer_relationships": ["Brand engagement", "Customer service"],
+        "channels": ["Wholesale", "Direct-to-consumer (DTC)"],
+        "customer_segments": ["Individual consumers", "Athletes and sports teams", "Fitness and wellness enthusiasts"],
+        "revenue_streams": ["Footwear sales", "Apparel sales", "Accessories"],
+        "cost_structure": ["Cost of goods sold", "Marketing and advertising expenses", "R&D investments"]
+    },
+    "Hertz": {
+        "key_partners": ["Car manufacturers", "Insurance companies", "Travel agencies"],
+        "key_activities": ["Car rental services", "Fleet management"],
+        "key_resources": ["Vehicle fleet", "Reservation system and technology"],
+        "value_proposition": ["Convenient personal transportation for individual users", "Tailored rental solutions for business travelers", "Replacement vehicle services for insurance partners"],
+        "customer_relationships": ["Self-service", "Personal assistance for customers"],
+        "channels": ["Reservation system", "Physical locations"],
+        "customer_segments": ["Individual users", "Business travelers", "Insurance replacement customers"],
+        "revenue_streams": ["Vehicle rentals", "Fleet management fees", "Global partnerships"],
+        "cost_structure": ["Fleet acquisition", "Employee salaries", "Vehicle maintenance"]
+    },
+    "Gymshark": {
+        "key_partners": ["Fitness influencers and ambassadors", "Manufacturers and suppliers", "Logistics and shipping providers"],
+        "key_activities": ["Design and development of athletic wear", "Production and manufacturing"],
+        "key_resources": ["Brand and design", "Manufacturing and supply chain"],
+        "value_proposition": ["High-quality activewear for fitness enthusiasts", "Performance-driven apparel for athletes", "Stylish and functional gear for wellness and lifestyle enthusiasts"],
+        "customer_relationships": ["Community building", "Personalized support"],
+        "channels": ["E-commerce platform", "Social media"],
+        "customer_segments": ["Fitness enthusiasts", "Athletes and sports professionals", "Wellness and lifestyle enthusiasts"],
+        "revenue_streams": ["Product sales"],
+        "cost_structure": ["Manufacturing and production costs", "Marketing and advertising expenses", "R&D investments"]
+    },
+    "Fortnite": {
+        "key_partners": ["Monetization platforms", "Content creators and influencers", "Esports organizations"],
+        "key_activities": ["Game development and updates", "Creating new game features"],
+        "key_resources": ["Game development team", "Server infrastructure"],
+        "value_proposition": ["Immersive gaming experience for gamers", "Safe and engaging environment for younger audience", "Platform for content creators to foster creativity and community"],
+        "customer_relationships": ["Community engagement", "Constant updates and events"],
+        "channels": ["Online gaming platforms", "Social media platforms"],
+        "customer_segments": ["Gamers", "Younger audience", "Content creators and influencers"],
+        "revenue_streams": ["In-game purchases/skins", "Battle pass", "Collaborations and partnerships"],
+        "cost_structure": ["Development and maintenance expenses", "Server infrastructure costs", "Marketing and promotion expenses"]
+    },
+    "BeReal": {
+        "key_partners": ["Social media platforms", "Influencers and content creators", "Customer service providers"],
+        "key_activities": ["Social media marketing and advertising", "Content creation and curation"],
+        "key_resources": ["Technology infrastructure and user data", "Team expertise and brand reputation"],
+        "value_proposition": ["Platform for authentic expression", "Direct channel for professional users/brands to engage with their audience"],
+        "customer_relationships": ["User engagement", "Community building and personalization"],
+        "channels": ["Mobile application", "Website", "Social media"],
+        "customer_segments": ["Users", "Professional users/brands"],
+        "revenue_streams": ["Subscriptions", "Advertising and sponsorships", "Data insights and analytics"],
+        "cost_structure": ["Marketing and advertising expenses", "Content creation costs", "Technology and platform maintenance costs"]
+    },
+    "Duolingo": {
+        "key_partners": ["Language experts and educators", "Translators for course creation", "Companies for sponsorship and ads"],
+        "key_activities": ["App development and maintenance", "Creating interactive language courses"],
+        "key_resources": ["Language courses", "Technology platform"],
+        "value_proposition": ["Innovative language learning for all users", "Digital learning supplement for educational institutions", "Specialized courses for business and professional users"],
+        "customer_relationships": ["Self-service", "Community support"],
+        "channels": ["Mobile app", "Web platform"],
+        "customer_segments": ["Language learners", "Students and educational institutions", "Professionals and business users"],
+        "revenue_streams": ["Super [] subscription", "Language certification tests", "Advertising partnerships"],
+        "cost_structure": ["Infrastructure and server maintenance", "Employee salaries", "Course creation and quality assurance"]
+    },
+    "Quora": {
+        "key_partners": ["Contributing users", "Advertisers", "Experts"],
+        "key_activities": ["Curating and organizing user-generated content", "Enhancing algorithms and user experience"],
+        "key_resources": ["User base", "Technology infrastructure"],
+        "value_proposition": ["Platform for users to ask questions and connect with experts", "One-stop platform for knowledge seekers and thought leaders"],
+        "customer_relationships": ["User-generated content", "User interactions"],
+        "channels": ["Website", "Mobile app"],
+        "customer_segments": ["Users", "Knowledge seekers", "Experts and thought leaders"],
+        "revenue_streams": ["Advertising services", "[] partnerships", "Premium subscriptions"],
+        "cost_structure": ["Hosting and infrastructure costs", "Legal and compliance expenses", "Marketing and advertising expenses"]
+    },
+    "Lego": {
+        "key_partners": ["Licensing partners, retailers and distributors", "Logistics and shipping companies", "Technology partners and educational institutions"],
+        "key_activities": ["Designing and developing [] sets", "Manufacturing [] sets"],
+        "key_resources": ["Intellectual property, design and engineering expertise", "Manufacturing facilities, brand reputation and distribution network"],
+        "value_proposition": ["Creative and educational toys for children", "Nostalgic and collectible items for adult hobbyists", "Learning resources for educators"],
+        "customer_relationships": ["Product quality and innovation", "Customer support and user-generated content"],
+        "channels": ["Brick-and-mortar stores", "Online store", "Retail partnerships and licensing agreements"],
+        "customer_segments": ["Children", "Adult hobbyists", "Parents and gift buyers", "Educators"],
+        "revenue_streams": ["Sale of [] sets and products", "Licensing partnerships", "Theme parks and experiences"],
+        "cost_structure": ["Raw material costs and manufacturing", "Research and development expenses", "Marketing and advertising expenses"]
+    }    
+}

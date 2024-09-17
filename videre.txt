@@ -1,0 +1,5 @@
+brukerne kan velge type forretningsmodeller/bransje
+    GPT får deretter 2-3 eksempler fra hvert området
+    dette gjør at brukere kan spille forskjellige "modes"
+
+
