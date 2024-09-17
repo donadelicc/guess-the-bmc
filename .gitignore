@@ -1,2 +1,5 @@
 venv
 .env
+videre.txt
+__pycache__
+*.pyc
