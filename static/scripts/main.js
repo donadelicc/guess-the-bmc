@@ -45,7 +45,7 @@ document.getElementById('submit-guess').addEventListener('click', function() {
     .then(response => response.json())
     .then(data => {
         let resultElement = document.getElementById('result');
-
+        resultElement.style.display = '';
         // Stopp TPBM-klokken når svaret er sendt inn
         if (tpbmTimerRunning) {
             let roundEndTime = Date.now();
@@ -56,7 +56,7 @@ document.getElementById('submit-guess').addEventListener('click', function() {
 
         document.getElementById('guess').style.display = 'none';
         document.getElementById('submit-guess').style.display = 'none';
-
+        
         if (data.result === 'correct') {
             score++;
             document.getElementById('score').textContent = `Score: ${score}`; // Oppdater poeng            
@@ -92,15 +92,19 @@ document.getElementById('next-round').addEventListener('click', function() {
 });
 
 
-
 function startNewRound() {
     currentRound++;
     document.getElementById('guess').value = '';
     document.getElementById('bmc-container').style.display = 'block';
+
+    // Vise inputfeltet og submit-knappen på nytt
     document.getElementById('guess').style.display = '';
     document.getElementById('submit-guess').style.display = '';
-    document.getElementById('result').textContent = ''; // Fjern tidligere resultat
-    document.getElementById('next-round').style.display = 'none'; // Skjul "Neste"-knappen
+
+    // Tømme resultatfeltet og skjule "Neste"-knappen
+    document.getElementById('result').textContent = '';
+    document.getElementById('result').style.display = 'none'; 
+    document.getElementById('next-round').style.display = 'none';
 
     // Oppdater rundetall i rundeoverskriften
     document.getElementById('round-header').textContent = `Runde ${currentRound}`;

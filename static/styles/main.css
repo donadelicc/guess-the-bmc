@@ -230,6 +230,7 @@ button:hover {
     justify-content: center;
     margin-top: 20px;
     padding: 20px;
+
     border-radius: 8px;
     max-width: 400px;
     margin: 0 auto; /* Sentraliser containeren */
@@ -266,10 +267,6 @@ button:hover {
     text-align: center;
     min-height: 30px; /* Sørg for at elementet alltid tar opp plass selv når det er tomt */
     width: 100%;
-}
-
-#next-round {
-    display: none; /* Skjult som standard */
 }
 
 
