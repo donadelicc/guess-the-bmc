@@ -64,9 +64,6 @@ document.getElementById('bmc-form').addEventListener('submit', function(event) {
         revenue_streams: revenueStreams || 'N/A'
     };
 
-    console.log(bmcData); // For debugging, her kan du sende data til serveren
-
-
     // Send data til serveren
     fetch('/add_bmc', {
         method: 'POST',

@@ -1,4 +1,5 @@
 let correctCompany = '';
+let usedCompanies = []; // Liste over selskaper som allerede er blitt brukt
 let score = 0;
 let gameStarted = false;
 let timer;
@@ -11,18 +12,26 @@ let roundStartTime;
 let roundTimes = []; // Liste for å lagre tidene per runde
 let tpbmTimerRunning = true; // For å spore om TPBM-klokken kjører
 
+// Funksjon for å hente en ny BMC som ikke allerede er brukt
+async function getUniqueBMC() {
+    let data;
+    do {
+        const response = await fetch('/get_bmc');
+        data = await response.json();
+    } while (usedCompanies.includes(data.company)); // Fortsett å hente til vi får et unikt selskap
+
+    // Når vi har et unikt selskap, legg det til listen over brukte selskaper
+    usedCompanies.push(data.company);
+    return data;
+}
+
+
 document.getElementById('start-game').addEventListener('click', function() {
     if (!gameStarted) {
         gameStarted = true;
-
-        // Vis game-bar
         document.getElementById('game-bar').style.display = 'flex';
-
-        // Skjul hovedtittelen og startknappen
         document.getElementById('start-knapp-container').style.display = 'none';
         document.getElementById('main-image').style.display = 'none';
-
-        // Oppdater rundetall og score i game-bar
         document.getElementById('game-score-value').textContent = '0';
         document.getElementById('round-number').textContent = '1';
         document.getElementById('game-time-value').textContent = '00:00';
@@ -115,9 +124,7 @@ function startNewRound() {
     roundStartTime = Date.now();
     tpbmTimerRunning = true; // Sett TPBM-timeren til å kjøre
 
-    fetch('/get_bmc')
-    .then(response => response.json())
-    .then(data => {
+    getUniqueBMC().then(data => {
         correctCompany = data.company;
         displayFormattedText('key_partners', data.bmc.key_partners);
         displayFormattedText('key_activities', data.bmc.key_activities);
