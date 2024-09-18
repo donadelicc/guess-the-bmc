@@ -11,20 +11,23 @@ let roundStartTime;
 let roundTimes = []; // Liste for å lagre tidene per runde
 let tpbmTimerRunning = true; // For å spore om TPBM-klokken kjører
 
-
 document.getElementById('start-game').addEventListener('click', function() {
     if (!gameStarted) {
         gameStarted = true;
+
+        // Vis game-bar
+        document.getElementById('game-bar').style.display = 'flex';
 
         // Skjul hovedtittelen og startknappen
         document.getElementById('start-knapp-container').style.display = 'none';
         document.getElementById('main-image').style.display = 'none';
 
+        // Oppdater rundetall og score i game-bar
+        document.getElementById('game-score-value').textContent = '0';
+        document.getElementById('round-number').textContent = '1';
+        document.getElementById('game-time-value').textContent = '00:00';
 
-        // Vis rundetittelen
-        document.getElementById('round-header').style.display = 'block';
-        document.getElementById('round-header').textContent = `Runde 1`;
-
+        // Start timer og spill
         startTimer();
         startNewRound();
     }
@@ -46,6 +49,7 @@ document.getElementById('submit-guess').addEventListener('click', function() {
     .then(data => {
         let resultElement = document.getElementById('result');
         resultElement.style.display = '';
+        
         // Stopp TPBM-klokken når svaret er sendt inn
         if (tpbmTimerRunning) {
             let roundEndTime = Date.now();
@@ -59,14 +63,14 @@ document.getElementById('submit-guess').addEventListener('click', function() {
         
         if (data.result === 'correct') {
             score++;
-            document.getElementById('score').textContent = `Score: ${score}`; // Oppdater poeng            
+            document.getElementById('game-score-value').textContent = score; // Oppdater poeng            
             resultElement.textContent = 'Correct!';
-            resultElement.style.backgroundColor = 'green';
+            resultElement.style.backgroundColor = '#DD650E';
             resultElement.style.color = 'white';
             resultElement.classList.add('correct-guess');
         } else {
             resultElement.textContent = `Wrong! The correct company was ${data.correct_company}.`;
-            resultElement.style.backgroundColor = 'red';
+            resultElement.style.backgroundColor = '#DD650E';
             resultElement.style.color = 'white';
             resultElement.classList.add('wrong-guess');        
         }
@@ -74,7 +78,6 @@ document.getElementById('submit-guess').addEventListener('click', function() {
         document.getElementById('next-round').style.display = ''; 
     });
 });
-
 
 document.getElementById('next-round').addEventListener('click', function() {
     if (currentRound < maxRounds) {
@@ -91,7 +94,6 @@ document.getElementById('next-round').addEventListener('click', function() {
     }
 });
 
-
 function startNewRound() {
     currentRound++;
     document.getElementById('guess').value = '';
@@ -106,8 +108,8 @@ function startNewRound() {
     document.getElementById('result').style.display = 'none'; 
     document.getElementById('next-round').style.display = 'none';
 
-    // Oppdater rundetall i rundeoverskriften
-    document.getElementById('round-header').textContent = `Runde ${currentRound}`;
+    // Oppdater rundetall i game-bar
+    document.getElementById('round-number').textContent = currentRound;
 
     // Start timer for ny runde
     roundStartTime = Date.now();
@@ -132,7 +134,7 @@ function startNewRound() {
 function startTimer() {
     timer = setInterval(function() {
         totalTime++;
-        document.getElementById('clock').textContent = `Time: ${formatTime(totalTime)}`;
+        document.getElementById('game-time-value').textContent = formatTime(totalTime); // Oppdater tid i game-bar
     }, 1000);
 }
 

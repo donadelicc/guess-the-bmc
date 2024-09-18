@@ -1,0 +1,236 @@
+/* Sørger for at body og html tar opp hele høyden av skjermen */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: white; /* Hvit bakgrunn */
+    font-family: Arial, sans-serif;
+    color: #DD650E; /* Oransje tekst */
+}
+
+body {
+    padding-top: 70px; /* Juster denne verdien for å tilpasse navbarens høyde */
+}
+
+/* Style for navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DD650E; /* Oransje bakgrunn */
+    padding: 14px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar a {
+    color: white; /* Hvite lenker */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.navbar a:hover {
+    background-color: white; /* Hvit hover-effekt */
+    color: #DD650E; /* Oransje tekst ved hover */
+}
+
+
+/* Notification-styling */
+#notification {
+    position: fixed; /* Gjør at notification alltid ligger fast øverst */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #DD650E; /* Oransje bakgrunn */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    z-index: 1000; /* Sørger for at den er over alt annet, inkludert navbaren */
+    display: none; /* Skjult som standard */
+}
+
+/* Form-container for å sentralisere innholdet */
+.form-container {
+    margin-top: 100px; /* Gir avstand til navbaren */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Sentrer containeren */
+    background-color: #DD650E; /* Oransje bakgrunn */
+    border-radius: 10px;
+    color: white; /* Hvit tekst */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading-styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-size: 36px;
+    font-weight: bold;
+    color: white; /* Hvite overskrifter */
+}
+
+/* Grid-container som holder alle feltene for BMC */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 kolonner */
+    grid-template-rows: repeat(3, auto); /* 3 rader */
+    gap: 15px; /* Avstand mellom boksene */
+    background-color: white; /* Hvit bakgrunn for rutenett */
+    margin-top: 20px;
+    border: 1px solid #DD650E; /* Oransje kant */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+    border: 1px solid #DD650E; /* Oransje kant */
+    padding: 20px;
+    background-color: white; /* Hvit bakgrunn */
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    color: #DD650E; /* Oransje tekst */
+}
+
+.grid-item span {
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.5;
+    color: #DD650E; /* Oransje tekst */
+}
+
+.grid-item div {
+    margin-bottom: 5px;
+}
+
+/* Justering av containerstørrelse */
+.combined-structure {
+    grid-column: 1 / 6;
+    grid-row: 3 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Key Partners tar to rader */
+.key-partners {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+/* Key Activities */
+.key-activities {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+/* Key Resources */
+.key-resources {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* Value Proposition tar to rader */
+.value-proposition {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+/* Customer Relationships */
+.customer-relationships {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+/* Channels */
+.channels {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+/* Customer Segments tar to rader */
+.customer-segments {
+    grid-column: 5 / 6;
+    grid-row: 1 / 3;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #DD650E; /* Oransje etiketter */
+}
+
+/* Stiler for textarea for bedre synlighet */
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #DD650E; /* Oransje kant */
+    border-radius: 5px;
+    resize: none;
+    background-color: white; /* Hvit bakgrunn */
+    color: #DD650E; /* Oransje tekst */
+}
+
+/* Form actions for selskapets navn og knapp */
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #DD650E; /* Oransje kant */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: white; /* Hvit bakgrunn */
+    color: #DD650E; /* Oransje tekst */
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: white; /* Hvit bakgrunn */
+    color: #DD650E; /* Oransje tekst */
+    border: 2px solid #DD650E;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #DD650E; /* Oransje hover-bakgrunn */
+    color: white; /* Hvit tekst ved hover */
+}
+
+/* Responsiv design */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .combined-structure {
+        flex-direction: column;
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+}

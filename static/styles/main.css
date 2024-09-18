@@ -1,16 +1,75 @@
 body, html {
     height: 100%; /* Sørger for at body og html tar opp hele høyden av skjermen */
-    margin: 0; /* Fjerner standard margin */
-    justify-content: center; /* Sentrerer horisontalt */
-    align-items: center; /* Sentrerer vertikalt */
-    background-color: #f4f4f4; /* Bakgrunnsfarge for å vise kontrast */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Hvit bakgrunn */
+    color: #DD650E; /* Oransje tekst som standard */
+    justify-content: center;
+    align-items: center;
 }
 
+body {
+    padding-top: 50px; /* Padding for å unngå at innhold skjules bak navbaren */
+}
+
+/* Style for navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DD650E; /* Oransje bakgrunn */
+    padding: 14px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar a {
+    color: white; /* Hvite lenker */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.navbar a:hover {
+    background-color: white; /* Hvit hover-effekt */
+    color: #DD650E; /* Oransje tekst ved hover */
+}
+
+/* Styling for game-bar */
+#game-bar {
+    background-color: white; /* Oransje bakgrunn */
+    color: #DD650E; /* Hvit tekst */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 100px; /* Like under navbar */
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+#game-bar div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+body {
+    padding-top: 90px; /* For å unngå overlapping med navbar og game-bar */
+}
+
+/* Heading-styling */
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 36px; /* Økt skriftstørrelse for overskriften */
+    font-size: 36px;
     font-weight: bold;
+    color: #DD650E; /* Oransje overskrifter */
 }
 
 /* Juster grid-container for å redusere høyde */
@@ -20,17 +79,17 @@ h1 {
     grid-template-rows: repeat(3, auto); /* 3 rader */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px; /* Redusert padding */
+    padding: 15px;
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid #DD650E; /* Oransje kant */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Reduser padding inni grid-item for å minske høyden */
 .grid-item {
-    border: 1px solid #ccc;
-    padding: 15px; /* Redusert padding inni boksene */
-    background-color: #fafafa;
+    border: 1px solid #DD650E; /* Oransje kant */
+    padding: 15px;
+    background-color: white;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -44,19 +103,19 @@ h1 {
 .grid-item span {
     font-weight: normal;
     font-size: 14px;
-    margin-top: 10px; /* Øker avstanden mellom overskrift og innhold */
-    text-align: center; /* Justerer teksten i innholdet til venstre */
-    line-height: 1.5; /* Økt linjeavstand for å gi mer plass mellom linjene */
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.5;
 }
 
 .grid-item div {
-    margin-bottom: 5px; /* Legg til litt margin mellom hver linje */
+    margin-bottom: 5px;
 }
 
 /* Justering av containerstørrelse */
 .combined-structure {
-    grid-column: 1 / 6; /* 1-6 */
-    grid-row: 3 / 4;    /* Rad 3 */
+    grid-column: 1 / 6;
+    grid-row: 3 / 4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -65,7 +124,7 @@ h1 {
 /* Key Partners tar to rader */
 .key-partners {
     grid-column: 1 / 2;
-    grid-row: 1 / 3; /* Dekker rad 1 og rad 2 */
+    grid-row: 1 / 3;
 }
 
 /* Key Activities */
@@ -83,7 +142,7 @@ h1 {
 /* Value Proposition tar to rader */
 .value-proposition {
     grid-column: 3 / 4;
-    grid-row: 1 / 3; /* Dekker rad 1 og rad 2 */
+    grid-row: 1 / 3;
 }
 
 /* Customer Relationships */
@@ -101,7 +160,7 @@ h1 {
 /* Customer Segments tar to rader */
 .customer-segments {
     grid-column: 5 / 6;
-    grid-row: 1 / 3; /* Dekker rad 1 og rad 2 */
+    grid-row: 1 / 3;
 }
 
 /* Cost Structure og Revenue Streams deler plassen horisontalt */
@@ -109,21 +168,21 @@ h1 {
 .combined-structure .revenue-streams {
     flex: 1;
     margin: 5px;
-    border: 1px solid #ccc;
-    padding: 15px; /* Økt padding for mer plass inni boksene */
+    border: 1px solid #DD650E;
+    padding: 15px;
     background-color: #fafafa;
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
-    font-size: 16px; /* Økt skriftstørrelse */
+    font-size: 16px;
 }
 
 .combined-structure .cost-structure span,
 .combined-structure .revenue-streams span {
     font-weight: normal;
     font-size: 14px;
-    line-height: 1.5; /* Økt linjeavstand */
-    margin-top: 5px; /* Litt mer avstand mellom overskrift og innhold */
+    line-height: 1.5;
+    margin-top: 5px;
 }
 
 input[type="text"], button {
@@ -134,7 +193,7 @@ input[type="text"], button {
 }
 
 button {
-    background-color: #28a745;
+    background-color: #DD650E;
     color: white;
     border: none;
     cursor: pointer;
@@ -142,38 +201,37 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #BB4E0A; /* Mørkere oransje ved hover */
 }
 
 #start-knapp-container {
-    display: flex;
+    display: inline-grid;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Tar opp hele bredden av skjermen */
-    height: 40%; /* Tar opp hele høyden av skjermen */
+    width: 100%;
+    height: 40%;
 }
 
 #start-game {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 36px; /* Stor skriftstørrelse for overskriften */
+    font-size: 36px;
     font-weight: bold;
     padding: 20px;
-    background-color: #28a745; /* Knappens bakgrunnsfarge */
+    background-color: #DD650E;
     color: white;
     border: none;
     border-radius: 10px;
-    cursor: pointer; /* Gir brukeren en visuell pekepinn om at dette er klikkbart */
+    cursor: pointer;
     display: inline-block;
-    transition: transform 0.3s ease; /* Myk overgang ved hover */
-    animation: blink-animation 1.5s infinite; /* Legger til blinkende animasjon */
+    transition: transform 0.3s ease;
+    animation: blink-animation 1.5s infinite;
 }
 #start-game:hover {
-    background-color: #218838; /* Endrer bakgrunnsfarge ved hover */
-    transform: scale(1.05); /* Forstørrer knappen litt ved hover */
+    background-color: #BB4E0A; /* Mørkere oransje ved hover */
+    transform: scale(1.05);
 }
 
-/* Blinkende animasjon for å tiltrekke oppmerksomhet */
 @keyframes blink-animation {
     0%, 100% {
         opacity: 1;
@@ -183,46 +241,26 @@ button:hover {
     }
 }
 
-
-
 #main-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Tar opp hele bredden av skjermen */
-    height: 45%; /* Tar opp hele høyden av skjermen */
+    width: 100%;
+    height: 45%;
 }
 
 #main-image img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Sørger for at bildet skalerer riktig */
+    object-fit: contain;
 }
 
 #bmc-container {
     display: none;
     margin-top: 20px;
-    max-height: 80vh; /* Sørger for at containeren ikke tar mer enn 80% av skjermhøyden */
-    overflow-y: auto; /* Legger til rulling hvis nødvendig */
+    max-height: 80vh;
+    overflow-y: auto;
 }
-
-/* #guess-container {
-    text-align: center;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-#result {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-
-}
-
-#next-round #submit-guess{
-    margin-left: 10px;
-} */
 
 #guess-container {
     display: flex;
@@ -230,25 +268,24 @@ button:hover {
     justify-content: center;
     margin-top: 20px;
     padding: 20px;
-
     border-radius: 8px;
     max-width: 400px;
-    margin: 0 auto; /* Sentraliser containeren */
+    margin: 0 auto;
 }
 
 #guess-container input[type="text"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #DD650E;
     border-radius: 4px;
     font-size: 16px;
 }
 
 #guess-container button {
     padding: 10px 20px;
-    margin: 10px 5px; /* Litt avstand mellom knappene */
-    background-color: #28a745;
+    margin: 10px 5px;
+    background-color: #DD650E;
     color: white;
     border: none;
     border-radius: 4px;
@@ -257,18 +294,21 @@ button:hover {
 }
 
 #guess-container button:hover {
-    background-color: #218838;
+    background-color: #BB4E0A;
 }
 
 #guess-container #result {
     font-size: 18px;
-    margin: 10px 0; /* Avstand mellom resultat og inputfeltet */
+    margin: 10px 0;
     color: #333;
     text-align: center;
-    min-height: 30px; /* Sørg for at elementet alltid tar opp plass selv når det er tomt */
+    min-height: 30px;
     width: 100%;
 }
 
+#score, #clock {
+    display: none;
+}
 
 #clock {
     font-size: 24px;
@@ -288,7 +328,7 @@ button:hover {
     font-size: 24px;
     position: absolute;
     top: 10px;
-    left: 50%; /* Plassér den i midten */
-    transform: translateX(-50%); /* Flytt den tilbake for å sentrere */
-    text-align: center; /* Sentrer teksten */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }

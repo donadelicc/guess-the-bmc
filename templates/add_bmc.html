@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legg til ny BMC</title>
+    <link rel="stylesheet" href="static/styles/new_bmc.css">
+</head>
+<body>
+
+
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/">Hjem</a>
+        <a href="/add_bmc">Legg til ny BMC</a>
+    </div>
+
+    <!-- Notification for success message -->
+    <div id="notification" class="notification" style="display: none;">
+        <p id="notification-message"></p>
+    </div>
+
+    <div class="form-container">
+        <h1>Legg til ny BMC</h1>
+
+        <form id="bmc-form">
+            <div class="form-actions">
+                <label for="company-name">Selskapets navn:</label>
+                <input type="text" id="company-name" name="company-name" placeholder="Skriv selskapets navn">
+    
+                <button type="submit">Registrer BMC</button>
+            </div>
+            <div id="bmc-container">
+                <div class="grid-container">
+                    <div class="grid-item key-partners">
+                        <label for="key-partners">Key Partners:</label>
+                        <textarea id="key-partners" name="key-partners" placeholder="Skriv key partners (komma-separert)"></textarea>
+                    </div>
+                    <div class="grid-item key-activities">
+                        <label for="key-activities">Key Activities:</label>
+                        <textarea id="key-activities" name="key-activities" placeholder="Skriv key activities (komma-separert)"></textarea>
+                    </div>
+                    <div class="grid-item key-resources">
+                        <label for="key-resources">Key Resources:</label>
+                        <textarea id="key-resources" name="key-resources" placeholder="Skriv key resources (komma-separert)"></textarea>
+                    </div>
+                    <div class="grid-item value-proposition">
+                        <label for="value-proposition">Value Proposition:</label>
+                        <textarea id="value-proposition" name="value-proposition" placeholder="Skriv value proposition"></textarea>
+                    </div>
+                    <div class="grid-item customer-relationships">
+                        <label for="customer-relationships">Customer Relationships:</label>
+                        <textarea id="customer-relationships" name="customer-relationships" placeholder="Skriv customer relationships (komma-separert)"></textarea>
+                    </div>
+                    <div class="grid-item channels">
+                        <label for="channels">Channels:</label>
+                        <textarea id="channels" name="channels" placeholder="Skriv channels (komma-separert)"></textarea>
+                    </div>
+                    <div class="grid-item customer-segments">
+                        <label for="customer-segments">Customer Segments:</label>
+                        <textarea id="customer-segments" name="customer-segments" placeholder="Skriv customer segments (komma-separert)"></textarea>
+                    </div>
+                    <div class="grid-item combined-structure">
+                        <div class="cost-structure">
+                            <label for="cost-structure">Cost Structure:</label>
+                            <textarea id="cost-structure" name="cost-structure" placeholder="Skriv cost structure"></textarea>
+                        </div>
+                        <div class="revenue-streams">
+                            <label for="revenue-streams">Revenue Streams:</label>
+                            <textarea id="revenue-streams" name="revenue-streams" placeholder="Skriv revenue streams"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <p id="result-message"></p>
+    </div>
+
+    <script src="static/scripts/add_bmc.js"></script>
+</body>
+</html>

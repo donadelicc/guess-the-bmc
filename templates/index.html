@@ -9,18 +9,27 @@
 </head>
 <body>
 
-
-    <div id="start-knapp-container">
-        <h1 id="start-game">START SPILLET</h1>   
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/">Hjem</a>
+        <a href="/add_bmc">Legg til ny BMC</a>
     </div>
 
-    <div id="round-header" style="display:none;">Runde 1</div>
+      <!-- Game Bar (Vises når spillet er i gang) -->
+    <div id="game-bar" style="display: none;">
+        <div id="game-round">Runde: <span id="round-number">1</span></div>
+        <div id="game-score">Poeng: <span id="game-score-value">0</span></div>
+        <div id="game-time">Tid: <span id="game-time-value">00:00</span></div>
+    </div>
 
+    <!-- <div id="round-header" style="display:none;">Runde 1</div> -->
     <!-- Tidtaker og poengsystem -->
-    <div id="clock">Tid: 00:00</div>
-    <div id="score">Score: 0</div>
-    
-    <!-- <button id="start-game">Start</button> GAMMEL KNAPP  --> 
+    <!-- <div id="clock">Tid: 00:00</div>
+    <div id="score">Score: 0</div> -->
+
+    <div id="start-knapp-container">
+        <h1 id="start-game">START SPILLET</h1>
+    </div>
 
     <div id="main-image">
         <img src="../static/images/scooby.jpg" alt="scooby" width="300" height="300">
@@ -48,8 +57,7 @@
             <button id="submit-guess">Send svar</button>
             <button id="next-round" style="display:none;">Neste</button>
         </div>
-
-
+        
     </div>
 
     <script src="static/scripts/main.js"></script>
