@@ -2,9 +2,6 @@ from flask import Flask, render_template, request, jsonify
 import random
 import json
 
-from util.postgres import upload_bmc, get_bmc, get_all_company_names
-
-
 app = Flask(__name__)
 
 # Lese JSON-data fra en fil
@@ -15,24 +12,11 @@ with open('data/bmc.json', 'r') as file:
 def index():
     return render_template('index.html')
 
-# Henter BMC-data fra PostgreSQL
 @app.route('/get_bmc', methods=['GET'])
-def get_bmc_route():
-    # Hent alle selskapsnavn fra PostgreSQL
-    company_names = get_all_company_names()
-
-    if not company_names:
-        return jsonify({"error": "No companies found in the database"}), 404
-
-    # Velg et tilfeldig selskap
-    company = random.choice(company_names)
-    
-    # Hent BMC-data for det valgte selskapet
-    data = get_bmc(company)
-    if data:
-        return jsonify({"company": company, "bmc": data[company]})
-    else:
-        return jsonify({"error": f"No data found for {company}"}), 404
+def get_bmc():
+    company = random.choice(list(bmc_data.keys()))
+    data = bmc_data[company]
+    return jsonify({"company": company, "bmc": data})
 
 @app.route('/check_answer', methods=['POST'])
 def check_answer():
@@ -53,13 +37,11 @@ def show_stats():
     return render_template('stats.html', score=score, total_time=total_time, TPBM=TPBM)
 
 
-# Laster opp ny BMC-data til PostgreSQL
 @app.route('/add_bmc', methods=['POST'])
 def add_bmc():
     data = request.get_json()
 
     new_bmc = {
-        "company_name": data['company_name'],
         "key_partners": data['key_partners'],
         "key_activities": data['key_activities'],
         "key_resources": data['key_resources'],
@@ -71,17 +53,19 @@ def add_bmc():
         "revenue_streams": data['revenue_streams']
     }
 
-    # Bruk upload_bmc-funksjonen fra postgres.py for å lagre data i PostgreSQL
-    upload_bmc(new_bmc)
+    # Legg til den nye BMC i ditt eksisterende bmc_data
+    bmc_data[data['company_name']] = new_bmc
+
+    # Du må også lagre denne endringen til fil, slik at den vedvarer
+    with open('data/bmc.json', 'w') as file:
+        json.dump(bmc_data, file, indent=4)
 
     return jsonify({"success": True})
 
 
-# Returnerer skjema for å legge til BMC-data
 @app.route('/add_bmc', methods=['GET'])
 def add_bmc_page():
     return render_template('add_bmc.html')
-
 
 
 if __name__ == '__main__':
