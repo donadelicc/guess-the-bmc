@@ -1,6 +1,5 @@
 import pyodbc, struct
 import json
-from azure import identity
 import os
 
 from dotenv import load_dotenv
