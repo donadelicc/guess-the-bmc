@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 server= "bmc-game.database.windows.net"
 database = "bmc"
 
