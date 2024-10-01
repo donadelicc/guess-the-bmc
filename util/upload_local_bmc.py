@@ -1,8 +1,9 @@
-from util.postgres import connect_to_db, upload_bmc, get_bmc
+# from util.postgres import connect_to_db, upload_bmc, get_bmc
+from db import upload_bmc
 import json
 import random
 
-with open('data/bmc.json', 'r') as file:
+with open('../data/bmc.json', 'r') as file:
     bmc_data = json.load(file)
 
 # Laste opp hvert selskap fra bmc_data til PostgreSQL

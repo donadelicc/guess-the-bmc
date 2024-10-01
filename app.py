@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import random
 import json
 
-from util.postgres import upload_bmc, get_bmc, get_all_company_names
+from util.db import upload_bmc, get_bmc, get_all_company_names
 
 
 app = Flask(__name__)
