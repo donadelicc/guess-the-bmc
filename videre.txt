@@ -1,4 +1,4 @@
-1) brukere kan legge til egne BMC-er!
+1) fikse latency --> tar 3 sekunder å hente BMC data i produksjon
 
 
 2) brukerne kan velge type forretningsmodeller/bransje

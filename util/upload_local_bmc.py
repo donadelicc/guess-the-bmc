@@ -10,8 +10,8 @@ with open('../data/bmc.json', 'r') as file:
 for company_name, data in bmc_data.items():
     # Legg til company_name i data-ordboken, siden den skal også lagres
     data['company_name'] = company_name
-    
-    # Last opp data til PostgreSQL
-    upload_bmc(data)
+    if company_name == "Blizzard":
+        # Last opp data til databasen
+        upload_bmc(data)
 
 print("All BMC data has been uploaded successfully.")

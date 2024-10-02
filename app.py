@@ -1,11 +1,25 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, g
 import random
 import json
 
-from util.db import upload_bmc, get_bmc, get_all_company_names
+from util.db import upload_bmc, get_bmc, get_all_company_names, connect_to_db
 
 
 app = Flask(__name__)
+
+# Oppretter tilkoblingen og lagrer den i Flask g variabel (en global objekt for hver request)
+@app.before_request
+def before_request():
+    if 'db_conn' not in g:
+        g.db_conn = connect_to_db()
+        
+# Lukker tilkoblingen når forespørselen er ferdig
+@app.teardown_request
+def teardown_request(exception):
+    db_conn = g.pop('db_conn', None)
+    if db_conn is not None:
+        db_conn.close()
+
 
 @app.route('/')
 def index():
@@ -14,9 +28,8 @@ def index():
 # Henter BMC-data fra PostgreSQL
 @app.route('/get_bmc', methods=['GET'])
 def get_bmc_route():
-    # Hent alle selskapsnavn fra PostgreSQL
-    company_names = get_all_company_names()
-
+    connection = g.db_conn
+    company_names = get_all_company_names(connection)
     if not company_names:
         return jsonify({"error": "No companies found in the database"}), 404
 
@@ -24,7 +37,7 @@ def get_bmc_route():
     company = random.choice(company_names)
     
     # Hent BMC-data for det valgte selskapet
-    data = get_bmc(company)
+    data = get_bmc(company, connection)
     if data:
         return jsonify({"company": company, "bmc": data[company]})
     else:
@@ -52,6 +65,7 @@ def show_stats():
 # Laster opp ny BMC-data til PostgreSQL
 @app.route('/add_bmc', methods=['POST'])
 def add_bmc():
+    connection = g.db_conn
     data = request.get_json()
 
     new_bmc = {
@@ -68,7 +82,7 @@ def add_bmc():
     }
 
     # Bruk upload_bmc-funksjonen fra postgres.py for å lagre data i PostgreSQL
-    upload_bmc(new_bmc)
+    upload_bmc(new_bmc, connection)
 
     return jsonify({"success": True})
 

@@ -20,8 +20,8 @@ def connect_to_db():
         print(f"Error connecting to database: {str(e)}")
         return None
 
-def upload_bmc(bmc_data):
-    connection = connect_to_db()
+def upload_bmc(bmc_data, connection):
+    # connection = connect_to_db()
     if connection:
         try:
             cursor = connection.cursor()
@@ -43,11 +43,10 @@ def upload_bmc(bmc_data):
             print(f"Error uploading data: {str(e)}")
         finally:
             cursor.close()
-            connection.close()
+            # connection.close()
 
-
-def get_bmc(company_name):
-    connection = connect_to_db()
+def get_bmc(company_name, connection):
+    # connection = connect_to_db()
     if connection:
         try:
             cursor = connection.cursor()
@@ -68,10 +67,10 @@ def get_bmc(company_name):
             print(f"Error fetching data: {str(e)}")
         finally:
             cursor.close()
-            connection.close()
+            # connection.close()
 
-def get_all_company_names():
-    connection = connect_to_db()
+def get_all_company_names(connection):
+    # connection = connect_to_db()
     if connection:
         try:
             cursor = connection.cursor()
@@ -92,5 +91,5 @@ def get_all_company_names():
             return []
         finally:
             cursor.close()
-            connection.close()
+            # connection.close()
 
