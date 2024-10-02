@@ -7,10 +7,6 @@ from util.db import upload_bmc, get_bmc, get_all_company_names
 
 app = Flask(__name__)
 
-# Lese JSON-data fra en fil
-with open('data/bmc.json', 'r') as file:
-    bmc_data = json.load(file)
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -81,8 +77,6 @@ def add_bmc():
 @app.route('/add_bmc', methods=['GET'])
 def add_bmc_page():
     return render_template('add_bmc.html')
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
