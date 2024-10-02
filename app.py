@@ -25,23 +25,17 @@ def teardown_request(exception):
 def index():
     return render_template('index.html')
 
-# Henter BMC-data fra PostgreSQL
 @app.route('/get_bmc', methods=['GET'])
 def get_bmc_route():
     connection = g.db_conn
-    company_names = get_all_company_names(connection)
-    if not company_names:
-        return jsonify({"error": "No companies found in the database"}), 404
+    data = get_bmc(connection)
 
-    # Velg et tilfeldig selskap
-    company = random.choice(company_names)
-    
-    # Hent BMC-data for det valgte selskapet
-    data = get_bmc(company, connection)
     if data:
-        return jsonify({"company": company, "bmc": data[company]})
+        company_name, bmc_data = list(data.items())[0]
+        return jsonify({"company": company_name, "bmc": bmc_data})
     else:
-        return jsonify({"error": f"No data found for {company}"}), 404
+        return jsonify({"error": "No data found"}), 404
+
 
 @app.route('/check_answer', methods=['POST'])
 def check_answer():

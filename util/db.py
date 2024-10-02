@@ -35,7 +35,6 @@ def upload_bmc(bmc_data, connection):
                 INSERT INTO bmc_data (company_name, bmc)
                 VALUES (?, ?)
             """
-            
             cursor.execute(insert_query, (company_name, bmc_json_data))
             connection.commit()
             print(f"Data for {company_name} uploaded successfully.")
@@ -45,29 +44,33 @@ def upload_bmc(bmc_data, connection):
             cursor.close()
             # connection.close()
 
-def get_bmc(company_name, connection):
-    # connection = connect_to_db()
+def get_bmc(connection):
     if connection:
         try:
             cursor = connection.cursor()
 
-            # Søk etter JSON-data basert på company_name
-            select_query = "SELECT bmc FROM bmc_data WHERE company_name = ?"
-            cursor.execute(select_query, (company_name,))
-            
+            # Select a random company and its BMC data in one query
+            select_query = """
+                SELECT company_name, bmc 
+                FROM bmc_data 
+                ORDER BY NEWID() 
+                OFFSET 0 ROWS 
+                FETCH NEXT 1 ROWS ONLY
+            """
+            cursor.execute(select_query)
             result = cursor.fetchone()
+            
             if result:
-                # Pakk ut JSON-dataen og sett selskapets navn som øverste nøkkel
-                bmc_data = json.loads(result[0])  # Konverter JSON-streng til Python-objekt
+                company_name = result[0]
+                bmc_data = json.loads(result[1])  # Convert JSON string to Python object
                 return {company_name: bmc_data}
             else:
-                print(f"No data found for {company_name}.")
+                print("No data found.")
                 return None
         except Exception as e:
             print(f"Error fetching data: {str(e)}")
         finally:
             cursor.close()
-            # connection.close()
 
 def get_all_company_names(connection):
     # connection = connect_to_db()
