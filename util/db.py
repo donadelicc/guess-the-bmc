@@ -1,14 +1,13 @@
-import pyodbc, struct
+import pyodbc
 import json
 import os
 
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
-server= "bmc-game.database.windows.net"
-database = "bmc"
+server = os.environ["AZURE_SQL_SERVER"]
+database = os.environ["AZURE_SQL_DATABASE"]
 
 connection_string = os.environ["AZURE_SQL_CONNECTIONSTRING"]
 
