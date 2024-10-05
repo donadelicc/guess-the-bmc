@@ -1,5 +1,5 @@
-1) fikse latency --> tar 3 sekunder å hente BMC data i produksjon
 
+1) Login funksjonalitet og Leaderboard!
 
 2) brukerne kan velge type forretningsmodeller/bransje
     GPT får deretter 2-3 eksempler fra hvert området

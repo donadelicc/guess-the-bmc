@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="static/scripts/login.js" defer></script>
+</head>
+<body>
+
+    <h1>Logg inn på Gjett BMC</h1>
+
+    <!-- Logg inn med brukernavn og passord -->
+    <div id="login-form">
+        <h2>Logg inn med brukernavn og passord</h2>
+        <form id="login-user-form">
+            <label for="username">Brukernavn:</label>
+            <input type="text" id="login-username" required>
+
+            <label for="password">Passord:</label>
+            <input type="password" id="login-password" required>
+
+            <button type="submit">Logg inn</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Logg inn som gjest -->
+    <div id="guest-login-form">
+        <h2>Logg inn som gjest</h2>
+        <form id="guest-user-form">
+            <label for="guest-username">Brukernavn:</label>
+            <input type="text" id="guest-username" required>
+
+            <button type="submit">Logg inn som gjest</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Registrer ny bruker -->
+    <div id="register-form">
+        <h2>Registrer ny bruker</h2>
+        <form id="register-user-form">
+            <label for="new-username">Brukernavn:</label>
+            <input type="text" id="new-username" required>
+
+            <label for="new-password">Passord:</label>
+            <input type="password" id="new-password" required>
+
+            <button type="submit">Registrer</button>
+        </form>
+    </div>
+
+</body>
+</html>

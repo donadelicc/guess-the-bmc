@@ -27,6 +27,14 @@ async function getUniqueBMC() {
 
 
 document.getElementById('start-game').addEventListener('click', function() {
+    const isLoggedIn = document.getElementById('is-logged-in').value === 'true';
+
+    if (!isLoggedIn) {
+        alert('Du må være logget inn for å starte spillet!');
+        window.location.href = '/login';  // Omdiriger til innloggingssiden
+        return;
+    }
+    
     if (!gameStarted) {
         gameStarted = true;
         document.getElementById('game-bar').style.display = 'flex';

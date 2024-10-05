@@ -1,5 +1,5 @@
 # from util.postgres import connect_to_db, upload_bmc, get_bmc
-from db import upload_bmc, get_bmc, connect_to_db
+from util.db import upload_bmc, get_bmc, connect_to_db
 import json
 import random
 
