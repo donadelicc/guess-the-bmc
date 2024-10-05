@@ -7,6 +7,8 @@ from util.db import upload_bmc, get_bmc, get_all_company_names, connect_to_db
 
 app = Flask(__name__)
 
+##deploy 8
+
 # Oppretter tilkoblingen og lagrer den i Flask g variabel (en global objekt for hver request)
 @app.before_request
 def before_request():
